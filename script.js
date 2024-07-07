@@ -187,7 +187,7 @@ function convertTemperature (Temperature, Scale) {
     if (scale === 'C') {
         console.log ('c' * 9/5) + 32;
     } else if (scale === 'F') {
-        console.log ('F' * 9/5) * 32;
+        console.log ('F' - 32) * 5/9;
     } else {
         return "C"
     }
@@ -212,12 +212,19 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-// function basicCalculator(num1, num2, operation) {
+function basicCalculator(num1, num2, operation){
+   if (operation === 'add') {
+    return num1 + num2
+   } else if (operation === 'subtract') {
+    return num1 - num2
+   } else if (operation === 'multiply') {
+    return num1 * num2
+   } else if (operation === 'divide') {
+    return num1 / num2
+   }
+}
 
-// }
-
-
-// console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
 
 /*
@@ -252,3 +259,42 @@ function calculateGrade(score){
 console.log('Exercise 10 Result:', calculateGrade(85));
 
 
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
+
+Complete the exercise in the space below:
+*/
+
+// function createUsername (firstName, lastName) {
+//     let combined = firstName + lastName
+//     return
+    
+// }
+
+// console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+function numArgs (...args) {
+    return numArgs.length;
+}
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
