@@ -159,7 +159,7 @@ Complete the exercise in the space below:
 */
 
 function calculateTip (billAmount, tipPercentage) {
-    const tipAmount= billAmount * (0.25 /100);
+    let tipAmount = billAmount = (0.2*50);
     return tipAmount;
 }
 
@@ -193,7 +193,7 @@ function convertTemperature (Temperature, Scale) {
     }
 }
 
-// console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
 
 /*
@@ -275,13 +275,12 @@ Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
 Complete the exercise in the space below:
 */
 
-// function createUsername (firstName, lastName) {
-//     let combined = firstName + lastName
-//     return
-    
-// }
+function createUsername (firstName, lastName) {
+    let combined = firstName.length + lastName.length
+    return(`${firstName.substring(0,3)}${lastName.substring(0,3)}${combined}`)
+}
 
-// console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
 
 /*
